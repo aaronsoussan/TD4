@@ -1,8 +1,9 @@
-/* Appliquer un style de base à toute la page */
+/* Style global */
 body {
-    font-family: 'Poppins', sans-serif; /* Police moderne */
-    background: linear-gradient(135deg, #74ebd5, #acb6e5); /* Dégradé élégant */
-    color: #ffffff; /* Texte blanc */
+    font-family: 'Poppins', sans-serif; /* Police élégante */
+    background: url('https://source.unsplash.com/1920x1080/?technology,coding') no-repeat center center fixed; /* Image de fond cool */
+    background-size: cover; /* Adapter l'image au viewport */
+    color: #ffffff;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -12,28 +13,46 @@ body {
     overflow: hidden;
 }
 
-/* Styliser les paragraphes */
-p {
-    margin: 10px 0;
+/* Conteneur principal avec un effet visuel */
+.container {
+    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour le texte */
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Ombre pour un effet 3D */
+    animation: fadeIn 1.5s ease-in-out; /* Animation d'entrée */
 }
 
-/* Premier paragraphe : Titre principal */
-p:first-of-type {
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Effet d'ombre pour le texte */
-    letter-spacing: 2px; /* Espacement entre les lettres */
+/* Style du titre principal */
+.container p:first-of-type {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* Ombre puissante */
+    margin: 0;
 }
 
-/* Second paragraphe : Sous-titre */
-p:last-of-type {
+/* Style du sous-titre */
+.container p:last-of-type {
     font-size: 1.2rem;
     font-style: italic;
     color: rgba(255, 255, 255, 0.8); /* Couleur légèrement transparente */
+    margin: 10px 0 0;
 }
 
-/* Animation de survol pour les paragraphes */
-p:hover {
+/* Effets interactifs */
+.container:hover {
     transform: scale(1.05); /* Zoom subtil */
-    transition: transform 0.3s ease-in-out; /* Animation fluide */
+    transition: transform 0.5s ease-in-out; /* Animation fluide */
+}
+
+/* Animation d'entrée */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
